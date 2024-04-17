@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import useLocalStorage from "use-local-storage";
-import { NameText } from "./components/text-name";
 import { TitleCard } from "./components/title-card";
 import "./styles/index.css";
 
@@ -36,11 +35,7 @@ export default function App() {
       style={{ width: "100%", height: "100%" }}
     >
       <TitleCard />
-      <NameText>Just testing this out</NameText>
       <ThemeToggle />
-      {/* <button onClick={switchTheme}>
-        Switch to {theme === "light" ? "Dark" : "Light"} theme.
-      </button> */}
     </div>
   );
 }

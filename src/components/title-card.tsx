@@ -1,4 +1,5 @@
+import { NameText } from "./text-name";
 
 export const TitleCard = () => {
-    return <div>Hunter Adams</div>
-}
+  return <NameText>Hunter Adams</NameText>;
+};

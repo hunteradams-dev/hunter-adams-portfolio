@@ -66,6 +66,14 @@ h6 {
     font-display: "auto";
 }
 
+@font-face {
+    font-family: "DM Sans";
+    src: url("../fonts/dm-sans/dm-sans-v15-latin-200.woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-display: "auto";
+}
+
 /* TODO: Move these to their own variables file */
 body[data-theme="light"] {
     --background: #e0e1dd;
@@ -81,6 +89,7 @@ body[data-theme="dark"] {
     /* --accent: darkred; */
 }
 
+
 body {
     padding: 0;
     margin: 0;
@@ -93,5 +102,13 @@ body {
 
 h1 {
     font-family: "Belanosima";
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(20px, 4vw, 80px);
+    color: inherit;
+}
+
+h2{
+    font-family: "DM Sans";
+    font-weight: 500;
+    font-size: clamp(10px, 2vw, 40px);
+    color: inherit;
 }

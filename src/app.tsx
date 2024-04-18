@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import useLocalStorage from "use-local-storage";
 import {
   LeftColumn,
@@ -9,38 +9,31 @@ import { TitleCard } from "./components/title-card";
 // import "./styles/index.css";
 import { createGlobalStyle } from 'styled-components'
 import { GlobalStyle } from "./styles/global-style";
+import { useThemeContext, ThemeProviderComponent } from "./contexts/themeProvider";
 
 
 
 function ThemeToggle() {
-  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [theme, setTheme] = useLocalStorage(
-    "theme",
-    defaultDark ? "dark" : "light"
-  );
-  const nextTheme = theme === "light" ? "dark" : "light";
-
-  useEffect(() => {
-    document.body.dataset.theme = theme;
-  }, [theme]);
+  const {theme, toggleTheme} = useThemeContext()
 
   return (
-    <button onClick={() => setTheme(nextTheme)}>
-      Switch to {nextTheme} theme.
+    <button onClick={toggleTheme}>
+      Switch to {theme} theme.
     </button>
   );
 }
 
 export default function App() {
-
   return (
     <>
-    <GlobalStyle />
+    <ThemeProviderComponent>
+
     <p>banana</p>
+    <ThemeToggle />
+    </ThemeProviderComponent>
     {/* <MainContainer>
-      <ThemeToggle />
-      <LeftColumn>
       <TitleCard />
+      <LeftColumn>
         <p>TEST</p>
       </LeftColumn>
       <RightColumn>

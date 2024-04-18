@@ -4,18 +4,20 @@ import fonts from "./fonts";
 export const GlobalStyle = createGlobalStyle`
 ${fonts};
   body {
-    font-family: Arial, sans-serif;
-    background-color: red;
-    color: #333333;
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.textPrimary};
     margin: 0;
     padding: 0;
-    font-family: "Belanosima";
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+
   }
 
   h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #007bff;
+    font-family: "Belanosima";
+    font-size: clamp(20px, 4vw, 80px);
+    color: inherit;
   }
 
   p {
@@ -24,6 +26,4 @@ ${fonts};
     margin-bottom: 10px;
     color: pink;
   }
-
-  /* Add more global styles as needed */
 `;

@@ -1,15 +1,5 @@
-import { useContext, useEffect } from "react";
-import useLocalStorage from "use-local-storage";
-import {
-  LeftColumn,
-  MainContainer,
-  RightColumn,
-} from "./components/main-container";
 import { TitleCard } from "./components/title-card";
-// import "./styles/index.css";
-import { createGlobalStyle } from 'styled-components'
-import { GlobalStyle } from "./styles/global-style";
-import { useThemeContext, ThemeProviderComponent } from "./contexts/themeProvider";
+import { ThemeProviderComponent, useThemeContext } from "./contexts/theme-provider";
 
 
 
@@ -27,19 +17,9 @@ export default function App() {
   return (
     <>
     <ThemeProviderComponent>
-
-    <p>banana</p>
     <ThemeToggle />
+    <TitleCard />
     </ThemeProviderComponent>
-    {/* <MainContainer>
-      <TitleCard />
-      <LeftColumn>
-        <p>TEST</p>
-      </LeftColumn>
-      <RightColumn>
-        <p>TEST</p>
-      </RightColumn>
-    </MainContainer> */}
     </>
   );
 }

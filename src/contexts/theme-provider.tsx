@@ -3,14 +3,14 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../styles/global-style";
 import { darkTheme, lightTheme } from "../styles/theme";
 
-enum Themes {
+export enum Themes {
   Light = "light",
   Dark = "dark",
 }
 
 type ThemeContextValue = {
   theme: Themes;
-  toggleTheme: () => void;
+  toggleTheme: (newTheme: Themes) => void;
 };
 
 type ThemeProviderProps = { children: React.ReactNode };
@@ -28,8 +28,8 @@ const ThemeProviderComponent = ({ children }: ThemeProviderProps) => {
       : Themes.Light;
   });
 
-  const toggleTheme = () => {
-    const newTheme = theme === Themes.Light ? Themes.Dark : Themes.Light;
+  const toggleTheme = (newTheme: Themes) => {
+    console.log(theme)
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
   };

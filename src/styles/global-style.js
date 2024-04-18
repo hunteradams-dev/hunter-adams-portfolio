@@ -4,11 +4,7 @@ import fonts from "./fonts";
 export const GlobalStyle = createGlobalStyle`
 ${fonts};
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+
 
   * {
     margin: 0;
@@ -22,13 +18,6 @@ ${fonts};
   svg {
     display: block;
     max-width: 100%;
-  }
-
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
   }
 
   p,
@@ -46,11 +35,14 @@ ${fonts};
     isolation: isolate;
   }
 
+  html {
+    width: 100%;
+    height: 100%;
+  }
+
   body {
     background-color: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.textPrimary};
-    margin: 0;
-    padding: 0;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;

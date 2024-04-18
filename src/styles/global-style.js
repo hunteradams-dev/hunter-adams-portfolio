@@ -62,6 +62,12 @@ ${fonts};
     font-size: clamp(20px, 4vw, 80px);
   }
 
+  h2 {
+    font-family: "Lato";
+    font-size: clamp(10px, 2vw, 40px);
+    font-weight: 400;
+  }
+
   p {
     font-size: 1rem;
     line-height: 1.5;

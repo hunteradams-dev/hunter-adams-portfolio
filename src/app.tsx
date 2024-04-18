@@ -8,7 +8,7 @@ import {
 import { TitleCard } from "./components/title-card";
 // import "./styles/index.css";
 import { createGlobalStyle } from 'styled-components'
-import { GlobalStyle } from "./styles/global-styles";
+import { GlobalStyle } from "./styles/global-style";
 
 
 

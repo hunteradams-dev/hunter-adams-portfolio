@@ -1,12 +1,15 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
+import fonts from "./fonts";
 
 export const GlobalStyle = createGlobalStyle`
+${fonts};
   body {
     font-family: Arial, sans-serif;
     background-color: red;
     color: #333333;
     margin: 0;
     padding: 0;
+    font-family: "Belanosima";
   }
 
   h1 {

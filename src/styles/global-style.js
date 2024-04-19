@@ -46,7 +46,7 @@ ${fonts};
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
-
+    transition: all 0.5s ease-out;
   }
 
   h1 {
@@ -58,6 +58,14 @@ ${fonts};
     font-family: "Lato";
     font-size: clamp(10px, 2vw, 40px);
     font-weight: 400;
+  }
+
+  // probably don't want this global, isolate to switch
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
 
   p {

@@ -10,7 +10,7 @@ export enum Themes {
 
 type ThemeContextValue = {
   theme: Themes;
-  toggleTheme: (newTheme: Themes) => void;
+  toggleTheme: () => void;
 };
 
 type ThemeProviderProps = { children: React.ReactNode };
@@ -22,16 +22,15 @@ const ThemeProviderComponent = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState<Themes>(() => {
     const savedMode = localStorage.getItem("theme") as Themes;
     return savedMode
-      ? savedMode as Themes
+      ? (savedMode as Themes)
       : prefersDarkMode.matches
       ? Themes.Dark
       : Themes.Light;
   });
 
-  const toggleTheme = (newTheme: Themes) => {
-    console.log(theme)
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
+  const toggleTheme = () => {
+    setTheme(theme === Themes.Light ? Themes.Dark : Themes.Light);
+    localStorage.setItem("theme", theme);
   };
 
   useEffect(() => {

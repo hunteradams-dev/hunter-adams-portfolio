@@ -6,6 +6,7 @@ const Label = styled.label`
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  align-self: right;
 `;
 
 const Switch = styled.div`
@@ -60,7 +61,6 @@ export const ToggleSwitch = ({
 
   return (
     <Label>
-      <span>Toggle is {checked ? "On" : "Off"}</span>
       <Input checked={checked} onChange={handleChange} type="checkbox" />
       <Switch />
     </Label>

@@ -1,25 +1,25 @@
+import {
+  LeftColumn,
+  MainContainer,
+  RightColumn,
+} from "./components/main-container";
+import { ThemeToggle } from "./components/theme-toggle";
 import { TitleCard } from "./components/title-card";
-import { ThemeProviderComponent, useThemeContext } from "./contexts/theme-provider";
-
-
-
-function ThemeToggle() {
-  const {theme, toggleTheme} = useThemeContext()
-
-  return (
-    <button onClick={toggleTheme}>
-      Switch to {theme} theme.
-    </button>
-  );
-}
+import { ThemeProviderComponent } from "./contexts/theme-provider";
 
 export default function App() {
   return (
     <>
-    <ThemeProviderComponent>
-    <ThemeToggle />
-    <TitleCard />
-    </ThemeProviderComponent>
+      <ThemeProviderComponent>
+        <MainContainer>
+          <LeftColumn>
+            <TitleCard />
+          </LeftColumn>
+          <RightColumn>
+            <ThemeToggle />
+          </RightColumn>
+        </MainContainer>
+      </ThemeProviderComponent>
     </>
   );
 }

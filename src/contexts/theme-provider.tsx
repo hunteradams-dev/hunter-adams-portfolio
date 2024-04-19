@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../styles/global-style";
 import { darkTheme, lightTheme } from "../styles/theme";
 
-enum Themes {
+export enum Themes {
   Light = "light",
   Dark = "dark",
 }
@@ -22,16 +22,15 @@ const ThemeProviderComponent = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState<Themes>(() => {
     const savedMode = localStorage.getItem("theme") as Themes;
     return savedMode
-      ? savedMode as Themes
+      ? (savedMode as Themes)
       : prefersDarkMode.matches
       ? Themes.Dark
       : Themes.Light;
   });
 
   const toggleTheme = () => {
-    const newTheme = theme === Themes.Light ? Themes.Dark : Themes.Light;
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
+    setTheme(theme === Themes.Light ? Themes.Dark : Themes.Light);
+    localStorage.setItem("theme", theme);
   };
 
   useEffect(() => {

@@ -4,11 +4,7 @@ import fonts from "./fonts";
 export const GlobalStyle = createGlobalStyle`
 ${fonts};
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+
 
   * {
     margin: 0;
@@ -22,13 +18,6 @@ ${fonts};
   svg {
     display: block;
     max-width: 100%;
-  }
-
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
   }
 
   p,
@@ -46,20 +35,37 @@ ${fonts};
     isolation: isolate;
   }
 
+  html {
+    width: 100%;
+    height: 100%;
+  }
+
   body {
     background-color: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.textPrimary};
-    margin: 0;
-    padding: 0;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
-
+    transition: all 0.5s ease-out;
   }
 
   h1 {
     font-family: "Belanosima";
     font-size: clamp(20px, 4vw, 80px);
+  }
+
+  h2 {
+    font-family: "Lato";
+    font-size: clamp(10px, 2vw, 40px);
+    font-weight: 400;
+  }
+
+  // probably don't want this global, isolate to switch
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
 
   p {

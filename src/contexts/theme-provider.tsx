@@ -29,8 +29,9 @@ const ThemeProviderComponent = ({ children }: ThemeProviderProps) => {
   });
 
   const toggleTheme = () => {
-    setTheme(theme === Themes.Light ? Themes.Dark : Themes.Light);
-    localStorage.setItem("theme", theme);
+    const newTheme = theme === Themes.Light ? Themes.Dark : Themes.Light
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
   useEffect(() => {

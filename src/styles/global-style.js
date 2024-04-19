@@ -9,6 +9,7 @@ ${fonts};
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   img,
@@ -30,6 +31,19 @@ ${fonts};
     overflow-wrap: break-word;
   }
 
+  h2,
+  h4,
+  h5,
+  h6,
+  p {
+    overflow-wrap: break-word;
+    font-family: Lato
+  }
+
+  h3{
+    font-family: Belanosima;
+  }
+
   #root,
   #__next {
     isolation: isolate;
@@ -46,32 +60,32 @@ ${fonts};
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
-    transition: all 0.5s ease-out;
+    // transition: all 0.25s ease-out;
+    width: 100%;
   }
 
   h1 {
     font-family: "Belanosima";
-    font-size: clamp(20px, 4vw, 80px);
+    font-size: clamp(40px, 8vw, 80px);
   }
 
   h2 {
     font-family: "Lato";
-    font-size: clamp(10px, 2vw, 40px);
+    font-size: clamp(20px, 4vw, 40px);
     font-weight: 400;
   }
 
-  // probably don't want this global, isolate to switch
   button {
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
+    color: inherit;
   }
 
   p {
-    font-size: 1rem;
-    line-height: 1.5;
     margin-bottom: 10px;
-    color: pink;
+    color: inherit;
+    opacity: 0.7
   }
 `;

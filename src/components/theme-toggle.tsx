@@ -4,27 +4,33 @@ import MoonComponent from "../images/moon-component";
 import SunComponent from "../images/sun-component";
 
 const sunSetAnimation = keyframes`
-  0% {
-    opacity: 0;
-    transform: translate(0, 0);
-  }
-  100%{
-    opacity: 1;
-    transform: translate(25px, 25px);
-  }
+0% {
+  opacity: 0;
+  transform: translate(25px, 25px);
+}
+
+100% {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
 `;
 
 const moonRiseAnimation = keyframes`
 0% {
   opacity: 0;
-  transform: translate(0, 0);
+  transform: translate(25px, 25px);
 }
 
 100% {
-  transform: translate(25px, 25px);
+  transform: translate(0px, 0px);
   opacity: 1;
 }
 `;
+
+const MainCelestialContainer = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+`
 
 const Sun = styled.div`
   transition: transform 0.5s ease;
@@ -55,13 +61,12 @@ const FullMoon = () => {
 export const ThemeToggle = () => {
   const { theme, toggleTheme } = useThemeContext();
   const isDarkMode = theme === Themes.Dark;
-  console.log(theme);
 
   return (
-    <div>
+    <MainCelestialContainer>
       <button onClick={toggleTheme}>
         {isDarkMode ? <FullMoon /> : <FullSun />}
       </button>
-    </div>
+    </MainCelestialContainer>
   );
 };

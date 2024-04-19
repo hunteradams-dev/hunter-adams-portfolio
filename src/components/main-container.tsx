@@ -7,21 +7,32 @@ export const MainContainer = styled.div`
   gap: 20px;
   height: 100%;
   width: 100%;
+  padding: 0 1rem;
+
+  @media (max-width: 700px){
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
 `;
 
 export const LeftColumn = styled.div`
-  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
   height: 100%;
+
+ 
 `;
 
 export const RightColumn = styled.div`
-    grid-area: left
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    align-items: center;
-    justify-content: center;
 `;
 export const GridItem = styled.div`
-  grid-area: right;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+
+  @media (max-width: 700px){
+    width: 100%;
+  }
+
 `;

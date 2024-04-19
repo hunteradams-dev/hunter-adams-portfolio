@@ -1,8 +1,11 @@
+import { AboutSection } from "./components/about";
 import {
+  GridItem,
   LeftColumn,
   MainContainer,
   RightColumn,
 } from "./components/main-container";
+import { NavItems } from "./components/nav";
 import { ThemeToggle } from "./components/theme-toggle";
 import { TitleCard } from "./components/title-card";
 import { ThemeProviderComponent } from "./contexts/theme-provider";
@@ -11,12 +14,20 @@ export default function App() {
   return (
     <>
       <ThemeProviderComponent>
+            <ThemeToggle />
         <MainContainer>
           <LeftColumn>
+            <GridItem>
             <TitleCard />
+            </GridItem>
+            <GridItem>
+              <NavItems />
+            </GridItem>
           </LeftColumn>
           <RightColumn>
-            <ThemeToggle />
+            <GridItem>
+              <AboutSection />
+            </GridItem>
           </RightColumn>
         </MainContainer>
       </ThemeProviderComponent>

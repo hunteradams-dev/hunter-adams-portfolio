@@ -1,5 +1,5 @@
 #Portfolio Project
 
-An updated portfolio project that will probably be forever ongoing.
+This is V2 of my portfolio that is currently and probably forever under construction. It is a place for me to try and test new ideas, as well as somewhere to put my pixel art. 
 
-Under construction! This will be underway soon. 🙂
+This portfolio will be constantly evolving, with a strong focus on mobile-first design/responsivity, and accessibility.

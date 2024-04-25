@@ -40,6 +40,15 @@ ${fonts};
     font-family: Lato
   }
 
+  h6,
+  h5,
+  h4,
+  h3,
+  h2,
+  h1 {
+    opacity: ${({ theme }) => theme.opacityH};
+  }
+
   h3{
     font-family: Belanosima;
   }
@@ -60,7 +69,6 @@ ${fonts};
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
-    // transition: all 0.25s ease-out;
     width: 100%;
   }
 
@@ -86,6 +94,6 @@ ${fonts};
   p {
     margin-bottom: 10px;
     color: inherit;
-    opacity: 0.7
+    opacity: ${({ theme }) => theme.opacityP}
   }
 `;

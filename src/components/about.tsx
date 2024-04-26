@@ -23,7 +23,7 @@ export const AboutSection = () => {
           experiment with digital art mediums (ThreeJS is the current
           obsession), and play video games. I have a little Maltillion called
           Joob and you will find her around the place here. They say a Joob
-          sighting is a positive omen.
+          sighting is a positive omen 🍀.
         </p>
       </section>
     </AboutDiv>

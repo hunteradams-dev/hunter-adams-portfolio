@@ -96,4 +96,8 @@ ${fonts};
     color: inherit;
     opacity: ${({ theme }) => theme.opacityP}
   }
+
+  li {
+    font-family: 'Lato';
+  }
 `;

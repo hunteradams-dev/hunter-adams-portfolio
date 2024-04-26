@@ -30,9 +30,11 @@ export const RightColumn = styled.div`
 `;
 export const GridItem = styled.div`
   display: flex;
+  height: 100%;
 
   @media (max-width: 700px){
     width: 100%;
+    height: 100%;
   }
 
 `;

@@ -1,4 +1,5 @@
 import { AboutSection } from "./components/about";
+import { Footer } from "./components/footer";
 import {
   GridItem,
   LeftColumn,
@@ -16,7 +17,7 @@ export default function App() {
   return (
     <>
       <ThemeProviderComponent>
-        <MainContainer>
+        <MainContainer className="content">
           <LeftColumn>
             <GridItem>
               <TitleCard />
@@ -38,6 +39,7 @@ export default function App() {
             </GridItem>
           </RightColumn>
         </MainContainer>
+        <Footer />
       </ThemeProviderComponent>
     </>
   );

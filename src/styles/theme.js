@@ -7,7 +7,9 @@ export const lightTheme = {
   opacityP: "var(--text-opacity-light, 1)",
   opacityH: "var(--heading-opacity-light, 0.9)",
   labelBackground: "var(--button-background-light, #a7c957)",
-  bulletMarker: "var(--bullet-marker-light, #935e20)"
+  bulletMarker: "var(--bullet-marker-light, #935e20)",
+  linkTextHover: "var(--link-hover-text-light, #094f01)",
+  cardBackground: "var(---card-background-light, #efebde)"
 };
 
 export const darkTheme = {
@@ -18,5 +20,7 @@ export const darkTheme = {
   opacityP: "var(--text-opacity-dark, 0.7)",
   opacityH: "var(--heading-opacity-dark, 0.9)",
   labelBackground: "var(--button-background-dark, #2a9d8f)",
-  bulletMarker: "var(--bullet-marker-dark, #ddcf5f)"
+  bulletMarker: "var(--bullet-marker-dark, #ddcf5f)",
+  linkTextHover: "var(--link-hover-text-light, #2ce522)",
+  cardBackground: "var(---card-background-dark, #faedcd)"
 };

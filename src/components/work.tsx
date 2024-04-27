@@ -2,10 +2,10 @@ import JoobSleeping from "../images/joob-sleeping-with-shadow";
 import Resume from "../static/hunter-adams-resume-2024.pdf";
 import { techStackArr } from "../utils";
 import { SectionHeader } from "./ui-components/section-header";
+import { StyledLink } from "./ui-components/styled-link";
 import { BulletContainer, TechStackColumn } from "./ui-components/tech-stacks";
 
-const arrow = String.fromCodePoint(0x1f865)
-
+const arrow = String.fromCodePoint(0x1f865);
 
 export const WorkSection = () => {
   const halfway = Math.ceil(techStackArr.length / 2);
@@ -34,9 +34,9 @@ export const WorkSection = () => {
         <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
           <p>
             You can find my full resume
-            <a href={Resume} target="_blank">
+            <StyledLink href={Resume} target="_blank">
               <span> here {arrow}</span>
-            </a>
+            </StyledLink>
           </p>
           <JoobSleeping />
         </div>

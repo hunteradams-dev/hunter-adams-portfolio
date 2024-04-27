@@ -4,8 +4,6 @@ import fonts from "./fonts";
 export const GlobalStyle = createGlobalStyle`
 ${fonts};
 
-
-
   * {
     margin: 0;
     padding: 0;
@@ -63,6 +61,10 @@ ${fonts};
     height: 100%;
   }
 
+  .content{
+    min-height: calc(100vh - 100px)
+  }
+
   body {
     background-color: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.textPrimary};
@@ -70,6 +72,7 @@ ${fonts};
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
     width: 100%;
+    height: 100%;
   }
 
   h1 {
@@ -99,47 +102,5 @@ ${fonts};
 
   li {
     font-family: 'Lato';
-  }
-
-  a {
-    text-decoration: none;
-    position: relative
-    color: ${({ theme }) => theme.textPrimary};
-
-     &:visited {
-      color: ${({ theme }) => theme.textPrimary};
-     }
-  }
-
-  a {
-    position: relative;
-    text-decoration: none;
-    padding-bottom: 2px;
-  }
-  
-  a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    opacity: 0.7;
-    border-radius: 4px;
-    background-color: #2ce522;
-    bottom: 0;
-    left: 0;
-    color: #2ce522;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .2s ease-in-out;
-  }
-  
-  a:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-    color: #2ce522;
-  }
-
-  a:hover{
-    color: #2ce522;
   }
 `;

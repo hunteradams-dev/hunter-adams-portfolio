@@ -15,7 +15,7 @@ export const AboutSection = () => {
           completely distracted by the limitlessness of web development, so I
           hopped into a bootcamp and never looked back. Now I get to spend my
           days building cool stuff for SwiftFox, while working on fun projects
-          of my own (like the sun/moon toggle you see up there, have a play with
+          of my own (like the light/dark toggle you see up there, have a play with
           it)!
         </p>
         <p>

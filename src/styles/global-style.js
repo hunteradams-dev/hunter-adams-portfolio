@@ -100,4 +100,41 @@ ${fonts};
   li {
     font-family: 'Lato';
   }
+
+  a {
+    text-decoration: none;
+    position: relative
+    color: ${({ theme }) => theme.textPrimary};
+    // line-height: 1;
+
+     &:visited {
+      color: ${({ theme }) => theme.textPrimary};
+     }
+  }
+
+  a {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 2px;
+  }
+  
+  a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    opacity: 0.7;
+    border-radius: 4px;
+    background-color: ${({ theme }) => theme.textPrimary};
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .2s ease-in-out;
+  }
+  
+  a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
 `;

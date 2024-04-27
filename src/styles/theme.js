@@ -6,7 +6,8 @@ export const lightTheme = {
   textTertiary: "var(--text-tertiary-light, #ffffff)",
   opacityP: "var(--text-opacity-light, 1)",
   opacityH: "var(--heading-opacity-light, 0.9)",
-  labelBackground: "var(--button-background-light, #778DA9)"
+  labelBackground: "var(--button-background-light, #a7c957)",
+  bulletMarker: "var(--bullet-marker-light, #935e20)"
 };
 
 export const darkTheme = {
@@ -16,5 +17,6 @@ export const darkTheme = {
   textTertiary: "var(--text-tertiary-dark, #2a9d8f)",
   opacityP: "var(--text-opacity-dark, 0.7)",
   opacityH: "var(--heading-opacity-dark, 0.9)",
-  labelBackground: "var(--button-background-dark, #2a9d8f)"
+  labelBackground: "var(--button-background-dark, #2a9d8f)",
+  bulletMarker: "var(--bullet-marker-dark, #ddcf5f)"
 };

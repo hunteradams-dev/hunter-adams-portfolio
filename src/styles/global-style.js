@@ -105,7 +105,6 @@ ${fonts};
     text-decoration: none;
     position: relative
     color: ${({ theme }) => theme.textPrimary};
-    // line-height: 1;
 
      &:visited {
       color: ${({ theme }) => theme.textPrimary};
@@ -125,9 +124,10 @@ ${fonts};
     height: 2px;
     opacity: 0.7;
     border-radius: 4px;
-    background-color: ${({ theme }) => theme.textPrimary};
+    background-color: #2ce522;
     bottom: 0;
     left: 0;
+    color: #2ce522;
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .2s ease-in-out;
@@ -136,5 +136,10 @@ ${fonts};
   a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
+    color: #2ce522;
+  }
+
+  a:hover{
+    color: #2ce522;
   }
 `;

@@ -1,34 +1,21 @@
-import JoobSleepingWithShadow from "../images/joob-sleeping-with-shadow";
+import JoobSleeping from "../images/joob-sleeping-with-shadow";
+import Resume from "../static/hunter-adams-resume-2024.pdf";
+import { techStackArr } from "../utils";
 import { SectionHeader } from "./ui-components/section-header";
 import { BulletContainer, TechStackColumn } from "./ui-components/tech-stacks";
 
-const sfStack = [
-  "React",
-  "Typescript/JavaScript",
-  "C#",
-  ".NET",
-  "NodeJS/ExpressJS",
-  "HTML",
-  "CSS",
-  "SQL",
-  "Docker",
-  "GraphQL",
-  "Azure Cosmos DB",
-  "Jest",
-];
+const arrow = String.fromCodePoint(0x1f865)
+
 
 export const WorkSection = () => {
-  const halfway = Math.ceil(sfStack.length / 2);
-  const columnOneItems = sfStack.slice(0, halfway);
-  const columnTwoItems = sfStack.slice(halfway);
+  const halfway = Math.ceil(techStackArr.length / 2);
+  const columnOneItems = techStackArr.slice(0, halfway);
+  const columnTwoItems = techStackArr.slice(halfway);
 
   return (
     <div>
       <section>
-        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center'}}>
-          <SectionHeader text="Work" />
-          <JoobSleepingWithShadow />
-        </div>
+        <SectionHeader text="Work" />
         <p>Feb 2023 - present</p>
         <h3>Full-Stack Software Engineer - SwiftFox</h3>
         <p>
@@ -44,7 +31,15 @@ export const WorkSection = () => {
           <TechStackColumn items={columnTwoItems} />
         </BulletContainer>
 
-        <p>You can find my full resume here.</p>
+        <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+          <p>
+            You can find my full resume
+            <a href={Resume} target="_blank">
+              <span> here {arrow}</span>
+            </a>
+          </p>
+          <JoobSleeping />
+        </div>
       </section>
     </div>
   );

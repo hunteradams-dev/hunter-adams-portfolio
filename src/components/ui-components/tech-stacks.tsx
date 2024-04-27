@@ -10,7 +10,7 @@ export const BulletContainer = styled.div`
   ul li::marker {
     content: "🞂";
     font-size: 0.6rem;
-    color: #ddcf5f;
+    color: ${({ theme }) => theme.bulletMarker};
   }
 
   @media (max-width: 400px) {
@@ -22,8 +22,6 @@ export const BulletContainer = styled.div`
     display: flex;
     margin-left: 0.25rem;
   }
-
-
 `;
 
 const StyledColumn = styled.div`
@@ -35,11 +33,7 @@ const StyledColumn = styled.div`
   }
 `;
 
-export const TechStackColumn = ({
-  items,
-}: {
-  items: string[];
-}) => {
+export const TechStackColumn = ({ items }: { items: string[] }) => {
   return (
     <StyledColumn>
       <ul>
@@ -54,9 +48,7 @@ export const TechStackColumn = ({
 export const StyledListItem = ({ text }: { text: string }) => {
   return (
     <li>
-      <span>
-      {text}
-      </span>
+      <span>{text}</span>
     </li>
   );
 };

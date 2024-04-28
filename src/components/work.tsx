@@ -1,5 +1,5 @@
 import JoobSleeping from "../images/joob-sleeping-with-shadow";
-import Resume from "../static/hunter-adams-resume-2024.pdf";
+import Resume from "../static/updated-hunter-adams-resume-2024.pdf";
 import { techStackArr } from "../utils";
 import { CardContainer } from "./ui-components/card";
 import { StyledLink } from "./ui-components/styled-link";

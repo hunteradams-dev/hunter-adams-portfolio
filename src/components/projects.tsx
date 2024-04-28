@@ -1,5 +1,6 @@
 import { techStackArr } from "../utils";
 import { CardContainer } from "./ui-components/card";
+import { StyledLink } from "./ui-components/styled-link";
 import { BulletContainer, TechStackColumn } from "./ui-components/tech-stacks";
 
 export const ProjectsSection = () => {
@@ -22,7 +23,7 @@ export const ProjectsSection = () => {
           </BulletContainer>
         </CardContainer>
         <CardContainer>
-          <h3>Portfolio Website V1</h3>
+          <StyledLink href="https://hunteradamsdev-portfolio.netlify.app/" target="_blank"><h3>Portfolio Website V1</h3></StyledLink>
           <p>
             The first iteration of my website. It was made using raw HTML, CSS
             and Javascript, and is fully responsive.

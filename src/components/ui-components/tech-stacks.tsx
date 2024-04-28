@@ -8,7 +8,7 @@ export const BulletContainer = styled.div`
   text-align: left;
 
   ul li::marker {
-    content: "🞂";
+    content: "✔";
     font-family: "Arial";
     font-size: 0.6rem;
     color: ${({ theme }) => theme.bulletMarker};

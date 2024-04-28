@@ -34,7 +34,9 @@ export const WorkSection = () => {
           <p>
             You can find my full resume
             <StyledLink href={Resume} target="_blank">
-              <span> here {arrow}</span>
+              <span>
+                <u>here</u>
+              </span>
             </StyledLink>
           </p>
           <JoobSleeping />

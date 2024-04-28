@@ -30,10 +30,10 @@ export const WorkSection = () => {
 
         <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
           <p>
-            You can find my full resume
+            You can find my full resume{" "}
             <StyledLink href={Resume} target="_blank">
               <span>
-                <u>here</u>
+                <strong>here</strong>
               </span>
             </StyledLink>
           </p>

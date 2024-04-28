@@ -5,8 +5,6 @@ import { CardContainer } from "./ui-components/card";
 import { StyledLink } from "./ui-components/styled-link";
 import { BulletContainer, TechStackColumn } from "./ui-components/tech-stacks";
 
-const arrow = String.fromCodePoint(0x1f865);
-
 export const WorkSection = () => {
   const halfway = Math.ceil(techStackArr.length / 2);
   const columnOneItems = techStackArr.slice(0, halfway);

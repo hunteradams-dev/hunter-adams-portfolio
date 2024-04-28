@@ -5,8 +5,6 @@ import { CardContainer } from "./ui-components/card";
 import { StyledLink } from "./ui-components/styled-link";
 import { BulletContainer, TechStackColumn } from "./ui-components/tech-stacks";
 
-const arrow = String.fromCodePoint(0x1f865);
-
 export const WorkSection = () => {
   const halfway = Math.ceil(techStackArr.length / 2);
   const columnOneItems = techStackArr.slice(0, halfway);
@@ -34,7 +32,9 @@ export const WorkSection = () => {
           <p>
             You can find my full resume
             <StyledLink href={Resume} target="_blank">
-              <span> here {arrow}</span>
+              <span>
+                <u>here</u>
+              </span>
             </StyledLink>
           </p>
           <JoobSleeping />

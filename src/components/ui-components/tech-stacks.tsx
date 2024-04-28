@@ -9,6 +9,7 @@ export const BulletContainer = styled.div`
 
   ul li::marker {
     content: "🞂";
+    font-family: "Arial";
     font-size: 0.6rem;
     color: ${({ theme }) => theme.bulletMarker};
   }

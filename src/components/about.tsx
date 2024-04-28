@@ -1,11 +1,8 @@
-import styled from "styled-components";
 import { SectionHeader } from "./ui-components/section-header";
-
-const AboutDiv = styled.div``;
 
 export const AboutSection = () => {
   return (
-    <AboutDiv id="about">
+    <div>
       <SectionHeader text="About Me" />
       <section>
         <p>
@@ -15,8 +12,8 @@ export const AboutSection = () => {
           completely distracted by the limitlessness of web development, so I
           hopped into a bootcamp and never looked back. Now I get to spend my
           days building cool stuff for SwiftFox, while working on fun projects
-          of my own (like the light/dark toggle you see up there, have a play with
-          it)!
+          of my own (like the light/dark toggle you see up there, have a play
+          with it)!
         </p>
         <p>
           In my spare time I love to compete in Brazilian Jiu Jitsu, write,
@@ -26,6 +23,6 @@ export const AboutSection = () => {
           sighting is a positive omen 🍀.
         </p>
       </section>
-    </AboutDiv>
+    </div>
   );
 };

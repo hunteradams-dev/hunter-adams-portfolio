@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useThemeContext } from "../contexts/theme-provider";
 import GithubIcon from "../images/github";
 import LinkedInIcon from "../images/linkedin";
 
@@ -8,14 +7,16 @@ const FooterContainer = styled.footer`
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  position: relative;
   width: 100%;
-  height: 100px;
+  height: 80px;
+  grid-column: 1 / span 2;
+
+  @media (max-width: 1000px) {
+    grid-column: 1;
+  }
 `;
 
 export const Footer = () => {
-  const { theme } = useThemeContext();
-
   return (
     <FooterContainer>
       <GithubIcon />

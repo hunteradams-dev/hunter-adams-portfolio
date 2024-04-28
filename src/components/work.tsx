@@ -1,7 +1,7 @@
 import JoobSleeping from "../images/joob-sleeping-with-shadow";
 import Resume from "../static/hunter-adams-resume-2024.pdf";
 import { techStackArr } from "../utils";
-import { SectionHeader } from "./ui-components/section-header";
+import { CardContainer } from "./ui-components/card";
 import { StyledLink } from "./ui-components/styled-link";
 import { BulletContainer, TechStackColumn } from "./ui-components/tech-stacks";
 
@@ -13,9 +13,8 @@ export const WorkSection = () => {
   const columnTwoItems = techStackArr.slice(halfway);
 
   return (
-    <div>
-      <section>
-        <SectionHeader text="Work" />
+    <CardContainer>
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
         <p>Feb 2023 - present</p>
         <h3>Full-Stack Software Engineer - SwiftFox</h3>
         <p>
@@ -40,7 +39,7 @@ export const WorkSection = () => {
           </p>
           <JoobSleeping />
         </div>
-      </section>
-    </div>
+      </div>
+    </CardContainer>
   );
 };

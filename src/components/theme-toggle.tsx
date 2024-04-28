@@ -29,7 +29,6 @@ const moonRiseAnimation = keyframes`
 
 const MainCelestialContainer = styled.div`
   display: flex;
-  margin-left: auto;
 `
 
 const Sun = styled.div`

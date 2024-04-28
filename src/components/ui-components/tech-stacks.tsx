@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BulletContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100%;
+  height: auto;
   width: 100%;
   text-align: left;
 
@@ -13,7 +13,7 @@ export const BulletContainer = styled.div`
     color: ${({ theme }) => theme.bulletMarker};
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 1000px) {
     grid-template-columns: 1fr;
   }
 

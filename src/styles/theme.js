@@ -9,7 +9,7 @@ export const lightTheme = {
   labelBackground: "var(--button-background-light, #a7c957)",
   bulletMarker: "var(--bullet-marker-light, #935e20)",
   linkTextHover: "var(--link-hover-text-light, #094f01)",
-  cardBackground: "var(---card-background-light, #efebde)"
+  cardBackground: "var(---card-background-light, #e0e1dd)"
 };
 
 export const darkTheme = {
@@ -22,5 +22,5 @@ export const darkTheme = {
   labelBackground: "var(--button-background-dark, #2a9d8f)",
   bulletMarker: "var(--bullet-marker-dark, #ddcf5f)",
   linkTextHover: "var(--link-hover-text-light, #2ce522)",
-  cardBackground: "var(---card-background-dark, #faedcd)"
+  cardBackground: "var(---card-background-dark, #1B263B)"
 };

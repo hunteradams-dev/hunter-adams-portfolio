@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 const TitleDisplay = styled.h2`
   padding: 1rem 0;
-  font-weight: 700;
-  @media (min-width: 700px) {
-    display: none;
+  @media (max-width: 1000px) {
+    font-weight: 700;
   }
 `;
 

@@ -56,13 +56,8 @@ ${fonts};
     isolation: isolate;
   }
 
-  html {
-    width: 100%;
-    height: 100%;
-  }
-
   .content{
-    min-height: calc(100vh - 100px)
+    min-height: calc(100vh - 80px);
   }
 
   body {
@@ -71,18 +66,17 @@ ${fonts};
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
-    width: 100%;
-    height: 100%;
+  
   }
 
   h1 {
     font-family: "Belanosima";
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(40px, 6vw, 60px);
   }
 
   h2 {
     font-family: "Lato";
-    font-size: clamp(20px, 4vw, 40px);
+    font-size: clamp(20px, 3vw, 30px);
     font-weight: 400;
   }
 
@@ -98,6 +92,7 @@ ${fonts};
     margin-bottom: 10px;
     color: inherit;
     opacity: ${({ theme }) => theme.opacityP}
+    text-align: left;
   }
 
   li {

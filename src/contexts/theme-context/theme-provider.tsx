@@ -8,7 +8,13 @@ import {
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../../styles/global-style";
 import { darkTheme, lightTheme } from "../../styles/theme";
-import { CHANGE, THEME, ThemeContextValue, ThemeProviderProps, Themes } from "./utils";
+import {
+  CHANGE,
+  THEME,
+  ThemeContextValue,
+  ThemeProviderProps,
+  Themes,
+} from "./utils";
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 

@@ -12,7 +12,7 @@ import { ThemeToggle } from "./components/theme-toggle";
 import { TitleCard } from "./components/title-card";
 import { SectionHeader } from "./components/ui-components/section-header";
 import { WorkSection } from "./components/work";
-import { ThemeProviderComponent } from "./contexts/theme-provider";
+import { ThemeProviderComponent } from "./contexts/theme-context/theme-provider";
 
 export default function App() {
   return (
@@ -30,7 +30,7 @@ export default function App() {
           </GridItem>
         </LeftColumn>
         <RightColumn>
-        <SectionHeader text="Work" />
+          <SectionHeader text="Work" />
           <GridItem>
             <WorkSection />
           </GridItem>

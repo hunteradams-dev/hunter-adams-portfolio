@@ -1,7 +1,10 @@
 import styled, { keyframes } from "styled-components";
-import { Themes, useThemeContext } from "../contexts/theme-provider";
+import {
+  useThemeContext,
+} from "../contexts/theme-context/theme-provider";
 import MoonComponent from "../images/moon-component";
 import SunComponent from "../images/sun-component";
+import { Themes } from "../contexts/theme-context/utils";
 
 const sunSetAnimation = keyframes`
 0% {
@@ -29,7 +32,7 @@ const moonRiseAnimation = keyframes`
 
 const MainCelestialContainer = styled.div`
   display: flex;
-`
+`;
 
 const Sun = styled.div`
   transition: transform 0.5s ease;

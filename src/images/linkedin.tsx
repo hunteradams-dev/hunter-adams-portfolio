@@ -1,10 +1,17 @@
-import { Themes, useThemeContext } from "../contexts/theme-provider";
+import {
+  useThemeContext,
+} from "../contexts/theme-context/theme-provider";
+import { Themes } from "../contexts/theme-context/utils";
 
 const LinkedInIcon = () => {
   const { theme } = useThemeContext();
 
   return (
-    <a href="https://www.linkedin.com/in/hunteradamsdev/" target="_blank" className="footer-icon">
+    <a
+      href="https://www.linkedin.com/in/hunteradamsdev/"
+      target="_blank"
+      className="footer-icon"
+    >
       {theme === Themes.Light ? (
         <svg
           viewBox="0 0 20 20"

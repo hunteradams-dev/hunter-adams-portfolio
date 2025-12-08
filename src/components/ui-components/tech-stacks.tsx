@@ -38,8 +38,8 @@ export const TechStackColumn = ({ items }: { items: string[] }) => {
   return (
     <StyledColumn>
       <ul>
-        {items.map((m) => {
-          return <StyledListItem text={m} />;
+        {items.map((m, i) => {
+          return <StyledListItem key={`${m}_at_${i}`} text={m} />;
         })}
       </ul>
     </StyledColumn>

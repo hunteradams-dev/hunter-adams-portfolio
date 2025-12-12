@@ -24,7 +24,7 @@ export const ProjectsSection = () => {
         </CardContainer>
         <CardContainer>
           <StyledLink href="https://naviadams.netlify.app/" target="_blank">
-            <h3>Portfolio Website V1</h3>
+            <h3>Navi Adams</h3>
           </StyledLink>
           <p>
             Made with React and Tailwind, I made this little profile page as a

@@ -25,8 +25,8 @@ export const ProjectsSection = () => {
         <CardContainer>
           <StyledLink href="https://hunteradamsdev-portfolio.netlify.app/" target="_blank"><h3>Portfolio Website V1</h3></StyledLink>
           <p>
-            The first iteration of my website. It was made using raw HTML, CSS
-            and Javascript, and is fully responsive.
+            Made with React and Tailwind, I made this app as a way of keeping track
+            of my puppy's progress in learning tricks.
           </p>
           <BulletContainer>
             <TechStackColumn items={itemsColOne} />
